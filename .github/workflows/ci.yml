@@ -58,6 +58,7 @@ jobs:
         uses: ./
         with:
           milliseconds: 2000
+          ACTIONS_STEP_DEBUG: true
 
       - name: Print Output
         id: output

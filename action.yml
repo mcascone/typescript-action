@@ -17,7 +17,7 @@ inputs:
 # Define your outputs here.
 outputs:
   time:
-    description: 'Your output description here'
+    description: 'the time after the wait'
 
 runs:
   using: node20
