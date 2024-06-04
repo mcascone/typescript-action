@@ -17,7 +17,6 @@ export async function run(): Promise<void> {
     await wait(parseInt(ms, 10))
     core.debug(new Date().toTimeString())
 
-
     const input: string = core.getInput('my-input')
     const new_output_value = `${input} from inside!`
 

@@ -58,8 +58,10 @@ jobs:
         uses: ./
         with:
           milliseconds: 2000
-          my-input: "Hello World"
+          my-input: 'Hello World'
 
       - name: Print Output
         id: output
-        run: echo "${{ steps.test-action.outputs.time }} \n ${{ steps.test-action.outputs.my-output }}"
+        run: |
+          echo "${{ steps.test-action.outputs.time }}"
+          echo "${{ steps.test-action.outputs.my-output }}"
