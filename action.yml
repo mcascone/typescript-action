@@ -13,11 +13,16 @@ inputs:
     description: 'Your input description here'
     required: true
     default: '1000'
+  my-input:
+    description: 'Another input description. Will be appended with "from inside"'
+    required: true
 
 # Define your outputs here.
 outputs:
   time:
     description: 'the time after the wait'
+  my-output:
+    description: 'the output of the action'
 
 runs:
   using: node20

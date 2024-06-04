@@ -17,8 +17,13 @@ export async function run(): Promise<void> {
     await wait(parseInt(ms, 10))
     core.debug(new Date().toTimeString())
 
+
+    const input: string = core.getInput('my-input')
+    const new_output_value = `${input} from inside!`
+
     // Set outputs for other workflow steps to use
     core.setOutput('time', new Date().toTimeString())
+    core.setOutput('my-output', new_output_value)
   } catch (error) {
     // Fail the workflow run if an error occurs
     if (error instanceof Error) core.setFailed(error.message)
