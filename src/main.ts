@@ -17,8 +17,8 @@ export async function run(): Promise<void> {
     await wait(parseInt(ms, 10))
     core.debug(new Date().toTimeString())
 
-    const input: string = core.getInput('my-input')
-    const new_output_value = `${input} from inside!`
+    // const input: string = core.getInput('my-input')
+    const new_output_value = `${core.getInput('my-input')} from inside!`
 
     // Set outputs for other workflow steps to use
     core.setOutput('time', new Date().toTimeString())
