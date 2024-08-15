@@ -24965,8 +24965,11 @@ async function run() {
         core.debug(new Date().toTimeString());
         await (0, wait_1.wait)(parseInt(ms, 10));
         core.debug(new Date().toTimeString());
+        // const input: string = core.getInput('my-input')
+        const new_output_value = `${core.getInput('my-input')} from inside!`;
         // Set outputs for other workflow steps to use
         core.setOutput('time', new Date().toTimeString());
+        core.setOutput('my-output', new_output_value);
     }
     catch (error) {
         // Fail the workflow run if an error occurs
